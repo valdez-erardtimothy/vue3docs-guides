@@ -1,12 +1,23 @@
-<template>
+<!--<template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
-</template>
+</template>-->
 
+<template>
+  <div class="flex flex-row flex-wrap">
+    <aside class="flex-none items-center justify-center mx-4">
+      <VerticalNav />
+    </aside>
+    <main class="flex-1 py-12">
+      <router-view />
+    </main>
+  </div>
+</template>
 <style>
+/* default, included on build */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,3 +39,12 @@
   color: #42b983;
 }
 </style>
+
+<script>
+import VerticalNav from "./components/VerticalNav";
+export default {
+  components: {
+    VerticalNav,
+  },
+};
+</script>

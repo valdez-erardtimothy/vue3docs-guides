@@ -16,6 +16,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/conditionals-and-loops",
+    name: "Conditionals and Loops",
+    component: () => {
+      return import("../views/ConditionalsAndLoops.vue");
+    },
+  },
 ];
 
 const router = createRouter({

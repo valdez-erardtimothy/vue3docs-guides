@@ -16,11 +16,15 @@ export default {
       dateTimeUpdater: null,
     };
   },
-  created() {
+  beforeMount() {
     this.dateTimeUpdater = setInterval(
       this.updateDateTime,
       SECOND_IN_MILLISECONDS
     );
+  },
+  beforeUnmount() {
+    clearInterval(this.dateTimeUpdater);
+    this.dateTimeUpdater = null;
   },
   computed: {
     currentDateTimeString() {
