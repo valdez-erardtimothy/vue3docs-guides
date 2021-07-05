@@ -11,7 +11,7 @@
     <aside class="flex-none items-center justify-center mx-4">
       <VerticalNav />
     </aside>
-    <main class="flex-1 py-12">
+    <main class="flex-1 bg-gray-200 py-12">
       <router-view />
     </main>
   </div>
